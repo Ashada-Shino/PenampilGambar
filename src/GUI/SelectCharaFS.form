@@ -41,7 +41,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/penampilgambar/yae.jpg"/>
+              <Image iconType="3" name="/GUI/yae.jpg"/>
             </Property>
           </Properties>
           <Constraints>
@@ -54,7 +54,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/penampilgambar/yoimiya.jpg"/>
+              <Image iconType="3" name="/GUI/yoimiya.jpg"/>
             </Property>
           </Properties>
           <Constraints>
@@ -67,7 +67,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/penampilgambar/ayaka.jpg"/>
+              <Image iconType="3" name="/GUI/ayaka.jpg"/>
             </Property>
           </Properties>
           <Constraints>

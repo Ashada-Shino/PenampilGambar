@@ -3,20 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package penampilgambar;
+package GUI;
 
 import java.awt.CardLayout;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 
 /**
  *
  * @author Ashada
  */
-public class SelectCharaBtn extends javax.swing.JFrame {
+public class SelectCharaFS extends javax.swing.JFrame {
 
     /**
      * Creates new form SelectCharaBtn
      */
-    public SelectCharaBtn() {
+    public SelectCharaFS() {
         initComponents();
     }
 
@@ -29,25 +31,38 @@ public class SelectCharaBtn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bgPanel = new javax.swing.JPanel();
+        imgPanel = new javax.swing.JPanel();
+        yaeLB = new javax.swing.JLabel();
+        yoimiyaLB = new javax.swing.JLabel();
+        ayakaLB = new javax.swing.JLabel();
         btnpanel = new javax.swing.JPanel();
         yaebtn = new javax.swing.JButton();
         yoimiyabtn = new javax.swing.JButton();
         ayakabtn = new javax.swing.JButton();
         exitbtn = new javax.swing.JButton();
-        imgPanel = new javax.swing.JPanel();
-        yaeLB = new javax.swing.JLabel();
-        yoimiyaLB = new javax.swing.JLabel();
-        ayakaLB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Select Your Character");
+        setBackground(new java.awt.Color(255, 255, 255));
+        setUndecorated(true);
 
-        bgPanel.setBackground(new java.awt.Color(255, 255, 255));
+        imgPanel.setLayout(new java.awt.CardLayout());
 
-        btnpanel.setBackground(new java.awt.Color(255, 255, 255));
+        yaeLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        yaeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/yae.jpg"))); // NOI18N
+        imgPanel.add(yaeLB, "2");
 
-        yaebtn.setText("Yae Miko");
+        yoimiyaLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        yoimiyaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/yoimiya.jpg"))); // NOI18N
+        imgPanel.add(yoimiyaLB, "1");
+
+        ayakaLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ayakaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/ayaka.jpg"))); // NOI18N
+        imgPanel.add(ayakaLB, "0");
+
+        getContentPane().add(imgPanel, java.awt.BorderLayout.CENTER);
+
+        yaebtn.setText("Yae");
         yaebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 yaebtnActionPerformed(evt);
@@ -63,7 +78,7 @@ public class SelectCharaBtn extends javax.swing.JFrame {
         });
         btnpanel.add(yoimiyabtn);
 
-        ayakabtn.setText("Kamisato Ayaka");
+        ayakabtn.setText("Ayaka");
         ayakabtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ayakabtnActionPerformed(evt);
@@ -79,54 +94,9 @@ public class SelectCharaBtn extends javax.swing.JFrame {
         });
         btnpanel.add(exitbtn);
 
-        imgPanel.setLayout(new java.awt.CardLayout());
-
-        yaeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/penampilgambar/yae.jpg"))); // NOI18N
-        imgPanel.add(yaeLB, "2");
-
-        yoimiyaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/penampilgambar/yoimiya.jpg"))); // NOI18N
-        imgPanel.add(yoimiyaLB, "1");
-
-        ayakaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/penampilgambar/ayaka.jpg"))); // NOI18N
-        imgPanel.add(ayakaLB, "0");
-        ayakaLB.getAccessibleContext().setAccessibleName("");
-
-        javax.swing.GroupLayout bgPanelLayout = new javax.swing.GroupLayout(bgPanel);
-        bgPanel.setLayout(bgPanelLayout);
-        bgPanelLayout.setHorizontalGroup(
-            bgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(bgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnpanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(bgPanelLayout.createSequentialGroup()
-                        .addComponent(imgPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        bgPanelLayout.setVerticalGroup(
-            bgPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(imgPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bgPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bgPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(btnpanel, java.awt.BorderLayout.PAGE_END);
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void exitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitbtnActionPerformed
@@ -169,20 +139,25 @@ public class SelectCharaBtn extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SelectCharaBtn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelectCharaFS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SelectCharaBtn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelectCharaFS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SelectCharaBtn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelectCharaFS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SelectCharaBtn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SelectCharaFS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SelectCharaBtn().setVisible(true);
+                SelectCharaFS fullFrame = new SelectCharaFS();
+                GraphicsDevice device =
+                        GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+                device.setFullScreenWindow(fullFrame);
+                fullFrame.setVisible(true);
             }
         });
     }
@@ -190,7 +165,6 @@ public class SelectCharaBtn extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ayakaLB;
     private javax.swing.JButton ayakabtn;
-    private javax.swing.JPanel bgPanel;
     private javax.swing.JPanel btnpanel;
     private javax.swing.JButton exitbtn;
     private javax.swing.JPanel imgPanel;

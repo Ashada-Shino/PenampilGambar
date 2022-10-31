@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package penampilgambar;
+package GUI;
 
 import java.awt.CardLayout;
 
@@ -75,13 +75,13 @@ public class SelectCharaCB extends javax.swing.JFrame {
 
         imgPanel.setLayout(new java.awt.CardLayout());
 
-        yaeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/penampilgambar/yae.jpg"))); // NOI18N
+        yaeLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/yae.jpg"))); // NOI18N
         imgPanel.add(yaeLB, "0");
 
-        yoimiyaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/penampilgambar/yoimiya.jpg"))); // NOI18N
+        yoimiyaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/yoimiya.jpg"))); // NOI18N
         imgPanel.add(yoimiyaLB, "1");
 
-        ayakaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/penampilgambar/ayaka.jpg"))); // NOI18N
+        ayakaLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/ayaka.jpg"))); // NOI18N
         imgPanel.add(ayakaLB, "2");
 
         javax.swing.GroupLayout bgPanelLayout = new javax.swing.GroupLayout(bgPanel);
